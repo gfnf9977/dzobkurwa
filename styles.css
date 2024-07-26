@@ -1,0 +1,426 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    position: relative;
+    text-align: center;
+}
+
+.header-content {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header-links {
+    background-color: rgba(0, 0, 0, 0.7); /* Напівпрозорий фон */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.header-links p,
+.header-links a,
+.contact-info p,
+.contact-info a,
+.header-icon {
+    color: white; /* Зміна кольору тексту на білий */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тінь для тексту */
+}
+
+.header-links p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.header-links a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+    color: #ddd; /* Зміна кольору тексту при наведенні */
+}
+
+.header-icon {
+    margin: 0 10px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.header-icon i,
+.contact-info i {
+    margin-right: 8px;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Напівпрозорий фон */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.contact-info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info a:hover {
+    color: #ddd; /* Зміна кольору тексту при наведенні */
+    text-decoration: underline;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header-image {
+    width: 60%; /* Збільшити розмір зображення */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.header-text {
+    width: 35%; /* Зменшити ширину текстового блоку */
+    padding: 10px;
+    background-color: white;
+    border: 1px solid red; /* Зменшити товщину рамки */
+    border-radius: 20px; /* Більший радіус для округленості */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+nav {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+section ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+.job-list .job-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.job-list .job-item:last-child {
+    border-bottom: none;
+}
+
+.job-details {
+    display: none;
+    padding-top: 10px;
+}
+
+.job-details p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.job-details strong {
+    display: block;
+    font-weight: bold;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Медіа-запит для адаптивності */
+@media (max-width: 768px) {
+    .header-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-image,
+    .header-text {
+        width: 100%;
+    }
+}
+/* Основні стилі для кругів */
+.about-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Відстань між кружками */
+}
+
+.about-list li {
+    display: flex;
+    justify-content: center;
+}
+
+/* Стилі для кружків */
+.circle {
+    border-radius: 50%;
+    padding: 40px; /* Збільшено для більших кружків */
+    width: 250px; /* Збільшено */
+    height: 250px; /* Збільшено */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+/* Різні кольори для кружків */
+.circle:nth-of-type(1) {
+    background: linear-gradient(145deg, #f8b400, #f6c90e); /* Жовтий */
+}
+
+.circle:nth-of-type(2) {
+    background: linear-gradient(145deg, #f06292, #f48fb1); /* Рожевий */
+}
+
+.circle:nth-of-type(3) {
+    background: linear-gradient(145deg, #4caf50, #81c784); /* Зелений */
+}
+
+.circle:nth-of-type(4) {
+    background: linear-gradient(145deg, #2196f3, #64b5f6); /* Синій */
+}
+
+.circle:nth-of-type(5) {
+    background: url('https://spe.org.ua/wp-content/uploads/2019/11/Iak-pozbutysia-bidnoho-sposobu-myslennia-i-blokiv-shchodo-hroshei.jpg') center/cover no-repeat;
+    /* Зображення як фон */
+}
+
+.circle:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.9);
+}
+
+.circle strong {
+    font-size: 1.4em; /* Збільшено */
+    margin-bottom: 15px; /* Збільшено */
+    color: white; /* Зміна кольору тексту на білий для контрасту */
+}
+
+.circle p {
+    margin: 0;
+    font-size: 1.1em; /* Збільшено */
+    line-height: 1.6em; /* Збільшено */
+    color: white; /* Зміна кольору тексту на білий для контрасту */
+}
+
+/* Стилі для вакансій */
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.job-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.job-item:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.job-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.job-title .toggle-arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.job-item.expanded .toggle-arrow {
+    transform: rotate(180deg) translateY(-50%);
+}
+
+.job-details {
+    display: none;
+    margin-top: 10px;
+}
+
+.job-detail {
+    margin-bottom: 10px;
+}
+
+.job-detail label {
+    font-weight: bold;
+}
+/* Стилі для секції умов праці */
+.conditions-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Відстань між блоками */
+}
+
+.conditions-list li {
+    display: flex;
+    justify-content: center;
+}
+
+/* Стилі для блоку з умовами праці */
+.condition {
+    border: 2px solid #2196f3; /* Синя рамка для контрасту */
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+    background: #fff;
+}
+
+/* Зміна кольору заголовків та тексту */
+.condition strong {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.condition p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/* Анімація при наведенні */
+.condition:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Додайте стиль для кнопки "Відгукнутися" */
+.apply-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.apply-button:hover {
+    background-color: #0056b3;
+}
+
+.job-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.job-title {
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.job-details {
+    display: none;
+    margin-top: 10px;
+}
+
+.job-detail {
+    margin-bottom: 10px;
+}
+
+.job-detail label {
+    font-weight: bold;
+}
