@@ -229,8 +229,8 @@ footer {
 .circle {
     border-radius: 50%;
     padding: 40px; /* Збільшено для більших кружків */
-    width: 250px; /* Збільшено */
-    height: 250px; /* Збільшено */
+    width: 220px; /* Збільшено */
+    height: 220px; /* Збільшено */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,7 +248,7 @@ footer {
 }
 
 .circle:nth-of-type(2) {
-    background: linear-gradient(145deg, #f06292, #f48fb1); /* Рожевий */
+    background: linear-gradient(608deg, #f06292, #f48fb1); /* Рожевий */
 }
 
 .circle:nth-of-type(3) {
@@ -389,7 +389,6 @@ footer {
 /* Стилі для нових блоків умов праці */
 .condition.bg5 {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlZ6iTpAv3oYBT70IG9FaUr8tQSBPmzWn02g&s'); /* Замініть на ваш URL зображення */
-    /* Інші стилі, якщо потрібно */
 }
 
 
@@ -472,3 +471,22 @@ footer {
 .job-detail label {
     font-weight: bold;
 }
+html {
+    scroll-behavior: smooth;
+
+
+
+header h1 {
+    font-size: 4em; /* Початковий розмір шрифту */
+    color: #343a40; /* Колір тексту */
+    margin: 0;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Легкий тіньовий ефект */
+    transition: transform 0.3s ease, color 0.3s ease; /* Плавний перехід для масштабу і кольору */
+}
+
+header h1:hover {
+    color: #007bff; /* Зміна кольору тексту при наведенні */
+    transform: scale(1.2); /* Збільшення розміру тексту при наведенні */
+}
+
