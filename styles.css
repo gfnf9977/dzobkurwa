@@ -363,18 +363,66 @@ footer {
     text-align: center;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #333;
-    background: #fff;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Додайте класи для різних фонів з фільтром яскравості */
+.condition.bg1 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYPXbqj7w_AvnNHiLvTpHuRe9H9qeoF37Krg&s');
+}
+
+.condition.bg2 {
+    background-image: url('https://medstat.kiev.ua/wp-content/uploads/2019/03/medstrah.jpg');
+}
+
+.condition.bg3 {
+    background-image: url('https://ciau.org.ua/wp-content/uploads/2022/01/CIAU_ULEAD__CIAU-Website-Article-scaled.jpg');
+}
+
+.condition.bg4 {
+    background-image: url('https://fillin.ua/storage/uploads/blog/fillin_7_porad_2.jpg');
+}
+/* Стилі для нових блоків умов праці */
+.condition.bg5 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlZ6iTpAv3oYBT70IG9FaUr8tQSBPmzWn02g&s'); /* Замініть на ваш URL зображення */
+    /* Інші стилі, якщо потрібно */
+}
+
+
+/* Додайте фільтр яскравості */
+.condition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: brightness(40%); /* Зменшити яскравість до 50% */
+    z-index: 0;
+}
+
+.condition > * {
+    position: relative;
+    z-index: 1;
+}
+
 }
 
 /* Зміна кольору заголовків та тексту */
 .condition strong {
     font-size: 1.4em;
+    color: white;
     margin-bottom: 10px;
 }
 
 .condition p {
     font-size: 1em;
+    color: white;
     line-height: 1.5em;
 }
 
